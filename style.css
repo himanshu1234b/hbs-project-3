@@ -1,8 +1,7 @@
 *,*::before,*::after{
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+     
     box-sizing: border-box;
   }
   body{
@@ -387,7 +386,12 @@
   }
 
 
+
+
   /* Service Card Section */
+.service-sec{
+  margin: 5% 0%; 
+}
 
 .card{
   max-width: 350px;
@@ -429,7 +433,7 @@
 /* About Section Start */
 
 .sec-text-header{
-  margin-top: 5%;
+  margin-top: 2%;
   border-bottom: solid black  6px !important;
   color: white;
   font-size: 25px;
@@ -510,4 +514,68 @@
   color: white;
 }
 
+/* Technology partner css strat */
 
+/* .technology-partner{
+  background-color: white;
+  
+} */
+
+.partner-logo{
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 150px;
+  min-width: 200px;
+  align-items: center;
+  justify-content: space-between  ;
+  background-color: white;
+  padding-inline: 30px;
+  border-radius: 10px;
+
+}
+
+.partner-logo img {
+
+background: transparent;
+padding: 10px 0px;
+
+}
+
+/* Service Card css start */
+
+.s-section{
+  background-color: white;
+  
+}
+
+.service-head .service-head-title {
+  position: relative;
+  width: 400px;
+  color: blue;
+}
+
+
+.line-title{
+
+  position: relative;
+  width: 400px;
+    
+}
+
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+.line-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+.line-title::after {
+  width: 32px;
+  background: blue;
+}
