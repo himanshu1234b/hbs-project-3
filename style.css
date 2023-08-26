@@ -1,3 +1,4 @@
+
 *,*::before,*::after{
     margin: 0;
     padding: 0;
@@ -5,9 +6,8 @@
     box-sizing: border-box;
   }
   body{
-    max-width: 100%;
-    height: auto;
-    background: #000;
+    width: 100%;
+    background: hsl(43, 100%, 0%);
     color: #fff;
     font-family: 'Montserrat', sans-serif;
   
@@ -15,11 +15,10 @@
 
   .container{
 
-    padding-inline: 10px;
+    padding-inline: 30px;
     margin-inline: 30px;
 
   }
-
 
   .hero{
     /* border: 1px solid #555fff; */
@@ -43,6 +42,7 @@
     text-transform: uppercase;
     font-style: italic;
     display: inline-block;
+    padding-left: 0px;
   }
 
   .logo:hover{
@@ -108,19 +108,20 @@
    z-index: 1;
    background: #0000;
    flex-shrink: 0;
-   margin-top: 2rem;
+   margin-top: 2rem;    
+
   }
   .boxes .box{
     padding:1.5rem 1rem 0;
     text-align: left;
     background: #555;
   /*   border-radius: 8px; */
-    min-height: 170px;
+    min-height: 180px;
     width: 100%;
     max-width: 22rem;
     margin: 0 auto 2rem;
     transition: 0.2s ease-in-out;
-  position: relative;
+    position: relative;
   }
   .boxes .box:first-child{
       background: #555fff;
@@ -157,11 +158,16 @@
     z-index: 3;
     flex-shrink: 0;
     background: #0000;
+
   }
   .image-box img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    width: 250px;
+    object-fit: contain;
+    justify-content: end;
+    
   }
   .content-box{
     padding: 1rem;
@@ -169,6 +175,7 @@
     max-width: 330px;
     width:100%;
     flex-shrink: 0;
+
     
   }
   .content-box h3{
@@ -245,6 +252,7 @@
     }
     .image-box{
       margin: 2rem auto 1rem;
+      display: none;
     }
     .boxes{
       padding: 2rem ;
@@ -254,9 +262,11 @@
       margin: 0 auto;
     }
     .content-box h1{
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
+
+
     
   }
   @media all and (max-width:1024px) and (min-width:800px){
@@ -290,7 +300,7 @@
       margin-left: 0;
     }
   }
-  @media all and (max-width:800px){
+  @media all and (max-width:840px){
       .header{
       display: block;
       margin: 0;
@@ -368,6 +378,8 @@
       margin-left: 35%;
     }
   }
+
+
   @media all and (min-width: 1250px){
     .b-flex{
       padding-left: 3rem;
@@ -390,7 +402,7 @@
 
   /* Service Card Section */
 .service-sec{
-  margin: 5% 0%; 
+  margin: 60px 0%; 
 }
 
 .card{
@@ -454,7 +466,7 @@
 .about-cards{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items:center;
   padding-top:2rem;
 
@@ -462,7 +474,7 @@
 
 .ab-card{
 
-  max-width: 400px;
+  max-width: 420px;
   height: auto;
   /* border: 1px solid rgb(192, 191, 191); */
   background-color: #1e1d1d;
@@ -516,17 +528,16 @@
 
 /* Technology partner css strat */
 
-
 .partner-logo{
   display: flex;
   flex-wrap: wrap;
   min-height: 150px;
-  min-width: 200px;
+  min-width: 250px;
   align-items: center;
   justify-content: space-between  ;
   background-color: white;
   padding-inline: 30px;
-  border-radius: 10px;
+  border-radius: 10px; 
 
 }
 
@@ -534,44 +545,64 @@
 
 background: transparent;
 padding: 10px 0px;
-
+margin: 0px auto;
 }
 
-/* Service Card css start */
+@media all and (min-width:300px) and (max-width:500px){
 
-.s-section{
-  background-color: white;
+  .partner-logo{
+    flex-direction: column;
+  }
+}
+
+/* What We do css section start */
+
+.whatwedo-sec{
+  height: 600px;
+  padding: 60px 0px;
+  border-radius: 7px;
   
 }
 
-.service-head .service-head-title {
-  position: relative;
-  width: 400px;
-  color: blue;
+.whatwedo-title h2{
+
+  font-size: 32px;
+  font-weight: 700;
 }
 
+.whatwedo-sec hr{
 
-.line-title{
+  margin: 40px 0px;
 
-  position: relative;
-  width: 400px;
-    
+}
+.column-1{
+  width: 45%;
+  float: left;
 }
 
-.line-title::before,
-.line-title::after {
+.column{
+  float: left;
+  width: 22%;
+  margin: 0px auto;
+}
+.row::after{
   content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 4px;
-  border-radius: 2px;
+  clear: both;
+
 }
-.line-title::before {
-  width: 100%;
-  background: #f2f2f2;
+.column span{
+  margin-left: 25px;
+  font: 700;
+  font-size: 22px;
+  color: #105ada;
+  justify-content: flex-start;
+  
 }
-.line-title::after {
-  width: 32px;
-  background: blue;
+
+.column i{
+  /* margin-bottom: 20px; */
+  width: 30px;
+  height: 40px;
+  margin-left: 30px;
 }
+
