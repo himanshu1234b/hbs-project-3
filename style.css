@@ -6,10 +6,11 @@
     box-sizing: border-box;
   }
   body{
-    width: 100%;
+    width: 100% !important;
     background: hsl(43, 100%, 0%);
     color: #fff;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
   
   }
 
@@ -40,15 +41,19 @@
   }
   .logo{
     text-transform: uppercase;
+    font-size: 30px;
     font-style: italic;
     display: inline-block;
-    padding-left: 0px;
+    
   }
 
   .logo:hover{
 
     color: blue;
     transition:0.5s ease-out;
+    margin-left: 65px;
+    font-size: 35px;
+
   }
 
 
@@ -402,7 +407,7 @@
 
   /* Service Card Section */
 .service-sec{
-  margin: 60px 0%; 
+  margin: 70px 0%; 
 }
 
 .card{
@@ -474,7 +479,8 @@
 
 .ab-card{
 
-  max-width: 420px;
+  /* max-width: 31.33%; */
+  width: 380px;
   height: auto;
   /* border: 1px solid rgb(192, 191, 191); */
   background-color: #1e1d1d;
@@ -482,6 +488,7 @@
   padding: 10px;
   margin: 10px;
   padding-bottom: 30px;
+  justify-content: center;
 }
 
 .about-card-heading-text{
@@ -518,6 +525,10 @@
   margin: 0px auto;
   text-align: center;
 
+}
+
+.ab-btn-span:hover{
+  background-image: linear-gradient(85deg, blue, rgb(33, 133, 191));
 }
 
 
@@ -558,9 +569,9 @@ margin: 0px auto;
 /* What We do css section start */
 
 .whatwedo-sec{
-  height: 600px;
   padding: 60px 0px;
   border-radius: 7px;
+  height: 500px;
   
 }
 
@@ -568,6 +579,9 @@ margin: 0px auto;
 
   font-size: 32px;
   font-weight: 700;
+}
+.whatwedo-title span{
+  color: blue;
 }
 
 .whatwedo-sec hr{
@@ -582,20 +596,14 @@ margin: 0px auto;
 
 .column{
   float: left;
-  width: 22%;
+  width: 27.5%;
   margin: 0px auto;
-}
-.row::after{
-  content: "";
-  clear: both;
-
 }
 .column span{
   margin-left: 25px;
   font: 700;
-  font-size: 22px;
+  font-size: 20px;
   color: #105ada;
-  justify-content: flex-start;
   
 }
 
@@ -606,3 +614,216 @@ margin: 0px auto;
   margin-left: 30px;
 }
 
+.all-more-industry{
+  position: relative;
+  margin: 0px, auto;
+  text-align: center;
+  /* padding-top: 15px; */
+
+}
+
+.all-more-industry a{
+  border: 1px solid;
+  padding: 10px 25px ;
+  border-radius: 10px;
+  position: relative;
+  margin: 0px, auto;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+.all-more-industry i{
+  margin-left: 10px;
+}
+.all-more-industry a:hover{
+  background-image: linear-gradient(185deg, blue, rgb(33, 133, 191));
+  color: white;
+}
+
+
+
+/* All Services css Start */
+
+.all-services-sec{
+  margin-top: 4 rem;
+  padding: 60px 0px;
+  border-radius: 7px;
+  height: 500px;
+}
+.all-services-title h3{
+  font-size: 30px;
+}
+
+.all-services-title span{
+  color: blue;
+}
+
+
+.all-services-sec hr{
+  margin: 40px 0px;
+}
+
+
+/* Service more button css start */
+
+.column i{
+  /* margin-bottom: 20px; */
+  width: 30px;
+  height: 40px;
+  margin-left: 30px;
+}
+
+.all-more-service{
+  position: relative;
+  margin: 0px, auto;
+  text-align: center;
+  
+
+}
+
+.all-more-service a{
+  border: 1px solid;
+  padding: 10px 25px ;
+  border-radius: 10px;
+  position: relative;
+  margin: 0px, auto;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+.all-more-service i{
+  margin-left: 10px;
+}
+.all-more-service a:hover{
+  background-image: linear-gradient(185deg, blue, rgb(33, 133, 191));
+  color: white;
+}
+
+
+/* Auto scroll technologies Css Section Statrt */
+
+
+
+.auto-scroll-sec{
+  margin: 6rem 0px;
+}
+
+.main-card{
+  display:flex;
+  gap: 30px;
+  overflow: hidden;
+  width: fit-content;
+  
+}
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-content {
+  white-space: nowrap;
+  animation: scrollLeft 30s linear infinite; /* Adjust animation duration as needed */
+  
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Adjust the percentage to control scrolling speed */
+  }
+  
+}
+
+
+.main-card h4 {
+  font-size: 45px;
+  font: bold;
+  font-family: 'ADLaM Display';
+  opacity: 0.5
+} 
+
+/* Right Scroll CSS Strat here */
+
+.main-card-right{
+  display:flex;
+  gap: 40px;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.scroll-container-right {
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+
+.scroll-content-right {
+  white-space: nowrap;
+  animation: scrollRight 40s linear infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes scrollRight {
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(-100%); /* Adjust the percentage to control scrolling speed */
+  }
+  
+}
+
+
+.main-card-right h4 {
+  font-size: 45px;
+  font: bold;
+  font-family: 'ADLaM Display';
+  opacity: 0.5
+
+} 
+
+
+/* Cloud Scroll css start */
+
+
+.main-card-cloud{
+  display:flex;
+  gap: 40px;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.scroll-cloud {
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+
+.scroll-cloud-content {
+  white-space: nowrap;
+  animation: scrollCloud 40s linear infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes scrollCloud {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Adjust the percentage to control scrolling speed */
+  }
+  
+}
+
+
+.main-card-cloud h4 {
+  font-size: 45px;
+  font: bold;
+  font-family: 'ADLaM Display';
+  opacity: 0.5;
+  } 
